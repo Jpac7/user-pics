@@ -1,0 +1,7 @@
+extends ../base
+
+block content
+    h1= user + " pictures in " + trip
+    ul
+        each id in pictures
+            li: a(href="/pictures/show/" + id)= trip + " " + id

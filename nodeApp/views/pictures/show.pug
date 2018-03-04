@@ -1,0 +1,15 @@
+extends ../base
+
+block content
+    h1= 'Photo ' + id
+    p Awesome photo!
+    h2 Comments
+    ul
+        each comment in comments
+            li= comment.user + ' : ' + comment.comment
+                
+    form(action="/comments/new/" + id, method="POST")
+        textarea(name="comment")
+        br
+        input(type="submit", value="Submit comment")
+    
