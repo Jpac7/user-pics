@@ -1,7 +1,8 @@
 extends ../base
 
 block content
-    h1= user + " pictures in " + trip
+    h1= user + " pictures"
     ul
         each id in pictures
-            li: a(href="/pictures/show/" + id)= trip + " " + id
+            li: a(href="/pictures/show/" + id)= "Photo " + id
+    a(href='/users/logout') Log out

@@ -1,6 +1,7 @@
 var express = require('express'),
     router = express.Router()
 
+router.use('/users', require('./users'))
 router.use('/pictures', require('./pictures'))
 router.use('/comments', require('./comments'))
 

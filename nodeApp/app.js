@@ -1,6 +1,7 @@
 var express = require('express'),
     app = express(),
-    db = require('./db')
+    db = require('./db'),
+    session = require('express-session')
 
 // template engine
 app.engine('pug', require('pug').__express)
@@ -10,9 +11,14 @@ app.set('view engine', 'pug')
 app.use('/public', express.static(__dirname + '/public'))
 
 // middleware
+app.use(session({
+    secret: 'h&Hlgdi380x1=?$',
+    resave: false,
+    saveUninitialized: true
+}))
 app.use(require('body-parser').urlencoded({extended: true}))
 
-// routes
+// routes middleware
 app.use(require('./controllers'))
 
 db.connect('mongodb://localhost:27017/', 'travelAlbums', function(err) {

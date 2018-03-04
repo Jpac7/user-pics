@@ -11,7 +11,6 @@ module.exports.get = function() {
 module.exports.connect = function(url, database, done) {
     MongoClient.connect(url, function(err, client) {
         conn.db = client.db(database)
-        // client.close()
         done(err)
     })
 }

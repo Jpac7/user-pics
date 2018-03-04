@@ -4,3 +4,17 @@ block content
     h1 Useful app
     p
         | A small useful app able to evolve into something bigger...
+    ul
+        li: a(href='/team') Team
+        li: a(href='/about') About
+    h2 Log in
+    form(action='/users/login' method='POST')
+        input(type='email' name='email' placeholder='Email' required)
+        input(type='password' name='password' placeholder='Password' required)
+        input(type='submit' value='Log in' required)
+    h2 Register
+    form(action='/users/register' method='POST')
+        input(type="text" name='name' placeholder='Name' required)
+        input(type='email' name='email' placeholder='Email' required)
+        input(type='password' name='password' placeholder='Password' required)
+        input(type='submit' value='Register')
