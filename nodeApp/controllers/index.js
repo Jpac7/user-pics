@@ -17,5 +17,9 @@ router.get('/about', function(req, res) {
     res.render('about')
 })
 
+// router.all('/*', function(req, res) {
+//     res.render('index')
+// })
+
 module.exports = router
 

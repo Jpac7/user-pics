@@ -4,8 +4,8 @@ var router = require('express').Router(),
 router.post('/login', function(req, res) {
     User.authenticate(req.body.email, req.body.password, function(err, doc) {
         if(doc) {
-            req.session.user = doc.email
-            res.redirect('/pictures/list/' + doc.name)
+            req.session.user = doc
+            res.redirect('/pictures/list/' + doc._id)
         } else {
             res.redirect('/')
         }
@@ -20,8 +20,8 @@ router.get('/logout', function(req, res) {
 router.post('/register', function(req, res) {
     User.create(req.body.name, req.body.email, req.body.password, function(err, doc) {
         if(doc) {
-            req.session.user = req.body.email
-            res.redirect('/pictures/list/' + req.body.name)
+            req.session.user = doc
+            res.redirect('/pictures/list/' + doc._id)
         } else {
             res.redirect('/')
         }

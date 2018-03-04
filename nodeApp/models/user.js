@@ -16,7 +16,7 @@ module.exports.create = function(name, email, password, done) {
     }
 
     db.get().collection(COLLECTION).insert(data, function(err, doc) {
-        done(err, doc)
+        done(err, doc ? doc.ops[0] : {})
     })
 }
 
