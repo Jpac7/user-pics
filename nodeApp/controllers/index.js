@@ -6,7 +6,7 @@ router.use('/pictures', require('./pictures'))
 router.use('/comments', require('./comments'))
 
 router.get('/', function(req, res) {
-    res.render('index')
+    res.render('index', {alert: req.query.alert})
 })
 
 router.get('/team', function(req, res) {

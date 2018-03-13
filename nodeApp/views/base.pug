@@ -5,6 +5,8 @@ html
         block sctripts
             link(rel="stylesheet" href="/public/styles/main.css")
     body
+        if alert
+            div(style='background-color:red; text-align:center')= alert
         block content
         block fotter
             footer

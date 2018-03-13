@@ -7,7 +7,11 @@ router.use(auth)
 
 router.post('/new/:picture', function(req, res) {
     Comment.add(req.session.user._id, req.params.picture, req.body.comment, function(err, result) {
-        res.redirect('/pictures/show/' + req.params.picture)
+        var url = '/pictures/show/' + req.params.picture
+        if (err) {
+            url += '?alert=Comment not sent. Please, try again later.'
+        }
+        res.redirect(url)
     })
 })
 

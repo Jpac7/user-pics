@@ -4,7 +4,7 @@ block content
     h1= user + "'s pictures"
     form(action='/pictures/upload' method='POST' enctype='multipart/form-data')
         input(type='file' name='picture')
-        input(type="submit" value="Upload")
+        input(type="submit" value="Upload")    
     ul
         each picture in pictures
             li: a(href="/pictures/show/" + picture._id)= "Photo " + picture.name

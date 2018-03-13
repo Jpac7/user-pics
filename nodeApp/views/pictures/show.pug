@@ -1,17 +1,19 @@
 extends ../base
 
 block content
-    h1= 'Photo ' + picture.name
-    p Awesome photo!
-    img(src='/public/uploads/' + picture.name)
-    p= 'Date: ' + picture.insertedOn 
-    h2 Comments
-    ul
-        each comment in comments
-            li= comment.user + ' : ' + comment.comment
-                
-    form(action="/comments/new/" + picture._id, method="POST")
-        textarea(name="comment")
-        br
-        input(type="submit", value="Submit comment")
-    
+    if picture
+        h1= 'Photo ' + picture.name
+        p Awesome photo!
+        img(src='/public/uploads/' + picture.name)
+        p= 'Date: ' + picture.insertedOn 
+        h2 Comments
+        ul
+            each comment in comments
+                li= comment.user + ' : ' + comment.comment
+                    
+        form(action="/comments/new/" + picture._id, method="POST")
+            textarea(name="comment")
+            br
+            input(type="submit", value="Submit comment")
+    else
+        h1 No such picture.
