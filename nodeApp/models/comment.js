@@ -14,7 +14,7 @@ module.exports.add = function(user, picture, comment, cb) {
     }
     db.get().collection(COLLECTION).insertOne(data, function(err, result) {
         if (err) return cb(ERRORS.DB_ERROR)
-        cb(null, result)
+        cb(null, result.ops[0])
     })
 }
 

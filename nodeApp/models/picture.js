@@ -15,7 +15,7 @@ module.exports.add = function(user, name, path, done) {
     }
     db.get().collection(COLLECTION).insert(data, function(err, result) {
         if (err) return done(ERRORS.DB_ERROR)
-        done(null, result)
+        done(null, result.result.n > 0 ? result.ops[0] : {})
     })
 }
 

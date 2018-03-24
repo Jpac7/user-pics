@@ -28,8 +28,8 @@ module.exports.create = function(name, email, password, done) {
             return done(ERRORS.USER_EXISTS)
         }
 
-        db.get().collection(COLLECTION).insert(data, function(err, result) {
-            if (err, {}) return done(ERRORS.DB_ERROR)
+        db.get().collection(COLLECTION).insertOne(data, function(err, result) {
+            if (err) return done(ERRORS.DB_ERROR)
             done(null, result.nInserted !== 0 ? result.ops[0] : {})
         })
     })

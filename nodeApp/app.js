@@ -21,7 +21,7 @@ app.use(require('body-parser').urlencoded({extended: true}))
 // routes middleware
 app.use(require('./controllers'))
 
-db.connect('mongodb://localhost:27017/', 'travelAlbums', function(err) {
+db.connect('travelAlbums', db.MODES.PRODUCTION, function(err) {
     const port = 3000
     app.listen(port, function() {
         console.log('Listening on port ' + port)
