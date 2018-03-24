@@ -1,0 +1,18 @@
+{
+    "collections": {
+        "users": [
+            {
+                "name": "Melvin",
+                "email": "melvin@pingo.com",
+                "password": "rCr6BTIGpyqLtMZ/5g9Vrx2tdYI=",
+                "createdOn": "Tue, 13 Mar 2018 23:07:15 GMT"
+            },
+            {
+                "name": "Garfield",
+                "email": "kitty@cat.com",
+                "password": "NHwj7EsfqEgL9SV1MWj0qCRmr40=",
+                "createdOn": "Mon, 01 Jan 2016 23:07:15 GMT"
+            }
+        ]
+    }
+}

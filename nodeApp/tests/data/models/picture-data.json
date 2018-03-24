@@ -1,0 +1,24 @@
+{
+    "collections": {
+        "pictures": [
+            {
+                "user": "5a9c08349be82943c7a0aa0y",
+                "name": "384e5925dd2504ca07efcc666592976c",
+                "path": "/home/jpac/MyProjects/nodeApp/public/uploads/384e5925dd2504ca07efcc666592976c",
+                "insertedOn": "Tue, 13 Mar 2018 23:07:15 GMT"
+            },
+            {
+                "user": "5a9c08349be82943c7a0aa0n",
+                "name": "384e5925dd2504ca07efcc666592976y",
+                "path": "/home/jpac/MyProjects/nodeApp/public/uploads/384e5925dd2504ca07efcc666592976y",
+                "insertedOn": "Thu, 15 Mar 2018 15:10:10 GMT"
+            },
+            {
+                "user": "5a9c08349be82943c7a0aa0y",
+                "name": "384e5925dd2504ca07efcc666592976g",
+                "path": "/home/jpac/MyProjects/nodeApp/public/uploads/384e5925dd2504ca07efcc666592976g",
+                "insertedOn": "Tue, 13 Mar 2018 23:07:15 GMT"
+            }
+        ]
+    }
+}
